@@ -16,7 +16,7 @@ end
 
 def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal
 #titles on projects table with amount on pledges tables - funding goal on projects
-"SELECT title.projects, SUM((amount.pledges) - funding_goal.projects) FROM projects INNER JOIN pledges ON projects.id = pledges.id WHERE amount.pledges >= funding_goal.projects"
+"SELECT projects.title, SUM((amount.pledges) - funding_goal.projects) FROM projects INNER JOIN pledges ON projects.id = pledges.id WHERE amount.pledges >= funding_goal.projects"
 end
 
 def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_amount_and_users_name

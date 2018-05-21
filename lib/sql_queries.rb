@@ -15,8 +15,8 @@ def selects_the_user_name_age_and_pledge_amount_for_all_pledges_alphabetized_by_
 end
 
 def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal
-#titles on projects table with amount on pledges tables - funding goal on projects 
-"SELECT title.projects, amount.pledges, funding_goal.projects"
+#titles on projects table with amount on pledges tables - funding goal on projects
+"SELECT title.projects, amount.pledges, funding_goal.projects FROM projects INNER JOIN "
 end
 
 def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_amount_and_users_name
